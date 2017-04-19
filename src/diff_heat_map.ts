@@ -352,7 +352,7 @@ class DiffHeatMap implements IAppView {
   private render(canvas: HTMLCanvasElement, data: IDiffData) {
     const ctx = canvas.getContext('2d');
 
-    ctx.msImageSmoothingEnabled = false;
+    (<any>ctx).msImageSmoothingEnabled = false;
     //if (context.hasOwnProperty('imageSmoothingEnabled')) {
     (<any>ctx).imageSmoothingEnabled = false;
 
